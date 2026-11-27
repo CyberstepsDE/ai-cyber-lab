@@ -1,0 +1,13 @@
+# Your own work stays on your laptop: git pull never touches it, nothing in it is pushed.
+work/*
+!work/README.md
+
+# Keys and personal settings
+.env
+.env.*
+openrouter.json
+.claude/settings.local.json
+
+# System files
+.DS_Store
+Thumbs.db
