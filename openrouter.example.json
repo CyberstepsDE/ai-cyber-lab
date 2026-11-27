@@ -1,0 +1,8 @@
+{
+  "_comment": "Only if your instructor gives you an OpenRouter key. Copy this file to openrouter.json and paste the key; openrouter.json stays out of git. Start with: claude --settings openrouter.json",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+    "ANTHROPIC_AUTH_TOKEN": "sk-or-...REPLACE_ME",
+    "ANTHROPIC_API_KEY": ""
+  }
+}

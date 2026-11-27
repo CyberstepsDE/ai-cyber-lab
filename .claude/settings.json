@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./openrouter.json)"
+    ],
+    "ask": [
+      "Bash(ssh *)",
+      "PowerShell(ssh *)",
+      "Bash(git push *)",
+      "PowerShell(git push *)"
+    ]
+  }
+}

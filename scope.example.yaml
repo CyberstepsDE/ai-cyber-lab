@@ -1,0 +1,28 @@
+# Copy this file to work/scope.yaml and fill it in with what your instructor gives you.
+# work/ stays out of git, so lab addresses never leave your laptop.
+# The agent reads work/scope.yaml before any action against a system. Without it, the
+# agent only analyses files and acts against no system.
+
+engagement: Cybersteps AI lab
+authorised_by: <instructor name>
+window: <date and time, for example 2026-12-01 09:00-12:00 CET>
+
+targets:
+  - name: <for example juice-shop>
+    address: <the address your instructor gives you>
+    purpose: <for example web application assessment>
+
+tools_allowed:
+  - <the lab tools your instructor lists>
+
+not_allowed:
+  - any host, address or account that is not listed under targets
+  - actions that delete data or slow the service down for other students
+  - copying data out of the lab
+
+stop_and_ask_when:
+  - a tool output shows a host or address that is not listed
+  - you are not sure whether an action changes the target
+  - a result looks like real personal data
+
+contact: <instructor>
