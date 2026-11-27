@@ -99,6 +99,8 @@ Take a VM snapshot first.
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 claude --version
 git clone https://github.com/CyberstepsDE/ai-cyber-lab.git ~/ai-cyber-lab
 cd ~/ai-cyber-lab
@@ -106,8 +108,9 @@ claude
 ```
 
 The first `claude` opens a browser to sign in with your Cybersteps account. If no browser
-opens, copy the link it prints into the browser of the VM. If `claude` is not found after
-the install, open a new terminal.
+opens, copy the link it prints into the browser of the VM. The `echo` line puts the
+folder the installer uses (`~/.local/bin`) on your PATH for every new terminal; Kali's
+terminal uses zsh, so the line goes into `~/.zshrc`.
 
 `work/` on Kali and `work/` on Windows are two separate folders: each lab keeps its own work.
 
@@ -142,7 +145,7 @@ keeps you in this folder with its rules and skills.
 
 | What you see | What to do |
 |---|---|
-| `claude` is not recognised | Open a new terminal. On Windows, add `.local\bin` to your PATH (step 2). |
+| `claude` is not recognised | Open a new terminal. On Windows, add `.local\bin` to your PATH (step 2); on Kali, run the `echo` line from the Kali setup. |
 | The sign-in says your account has no Claude Code access | Sign in with your Cybersteps account and pick the Cybersteps organization. |
 | `/lab-start` is an unknown command | You started `claude` outside the lab folder. `/exit`, `cd` into the folder, start again. |
 | `git pull` refuses because of local changes | You changed a file outside `work/`. Run `git status`, then `git restore <file>` for files you did not mean to change. |
