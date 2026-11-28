@@ -141,6 +141,27 @@ model and weaker; use it when the data must stay on the machine.
 `ollama launch claude` also starts Claude Code on a local model, but `--settings ollama.json`
 keeps you in this folder with its rules and skills.
 
+## When Claude switches to another model
+
+Claude has safety checks for cybersecurity. When a request looks like an attack, for
+example writing an exploit, a penetration test step or scanning a program for weaknesses,
+Claude may answer with an earlier, less capable model. You see a notice in the chat, and
+the answer is labelled with the model that wrote it. The check reads more than your
+message: a file or tool output the agent reads can trigger it too. Defensive work, such
+as reading logs or reviewing code, is normally not affected.
+
+What to do:
+
+1. **Say what the task is.** Name it as authorised lab work and give the target from
+   `work/scope.yaml`. Context does not switch the check off, but a clear task helps.
+2. **Edit and retry.** Reword the message and send it again. If the first message is
+   still in the conversation, the switch may happen again, so start a fresh one with
+   `/clear` when needed.
+3. **Switch back** with `/model` and pick the model you had.
+4. **Or carry on** with the weaker model, and check its answers even harder.
+
+If it blocks your lab work again and again, tell your instructor.
+
 ## If something fails
 
 | What you see | What to do |
